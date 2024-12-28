@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url( "../fonts/Roboto-Regular.ttf" ) format( "truetype" );
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url( "../fonts/Roboto-Regular.ttf" ) format( "truetype" );
+}
+
+:root {
+  /* Primary color */
+  --Color-Tomato: hsl(4, 100%, 67%);
+
+  /* Neutral color */
+  --Color-Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Color-Charcoal-Grey: hsl(235, 18%, 26%);
+  --Color-Grey: hsl(231, 7%, 60%);
+  --Color-White: hsl(0, 0%, 100%);
+
+  /* Font size */
+  --Font-size-paragraph: 1em;
+  --Font-size-09: 0.9em;
+  --Font-size-08: 0.8em;
+  --Font-size-06: 0.6em;
+
+  /* Font family */
+  --font-family: "Roboto", sans-serif;
+
+  /* Font weight */
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+
+  /* Margins */
+  --Margin-top-05rem: 0.5rem;
+  --Margin-top-1rem: 1rem;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  background: var(--Color-Charcoal-Grey);
+  color: var(--Color-Dark-Slate-Grey);
+  font-family: var(--font-family);
+  font-size: var(--Font-size-paragraph);
+  font-weight: var(--font-weight-400);
+  line-height: 1.5;
+
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* White background */
+.bg-white {
+  background: var(--Color-White);
+  margin: 4rem auto;
+  width: 53%;
+  padding: 1.3rem;
+  border-radius: 2em;
+}
+
+.container {
+  /* display: flex;
+  flex-direction: row-reverse; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-auto-rows: 1fr;
+  align-items: center;
+}
+
+picture {
+  width: auto;
+  order: 1;
+}
+
+/* form-container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  width: auto;
+  padding: 2rem;
+}
+
+.form-container ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.form-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: var(--Margin-top-1rem);
+  text-indent: var(--Font-size-08);
+}
+
+.form-container ul li {
+  display: flex;
+  align-items: center;
+  font-size: var(--Font-size-08);
+  margin: 0.2rem 0;
+}
+
+.form-container ul li img {
+  width: 5.6%;
+}
+
+/* Text styling */
+.form-container h1 {
+  font-size: 2.8em;
+}
+
+.form-container p {
+  font-size: var(--Font-size-08);
+  margin-top: var(--Margin-top-05rem);
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--Margin-top-1rem);
+}
+
+/* Label styling */
+.form label {
+  font-size: var(--Font-size-06);
+  font-weight: var(--font-weight-700);
+  margin-top: var(--Margin-top-1rem);
+}
+
+/* Input styling */
+
+.form input,
+button {
+  margin: 0.6rem 0;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+}
+
+.form input[type="email"] {
+  background-color: transparent;
+  border: 0.8px solid var(--Color-Grey);
+  padding-left: 1.1em;
+  outline: none;
+}
+
+.form input[type="email"]::placeholder {
+  font-size: var(--Font-size-08);
+}
+
+/* Button styling */
+.form button {
+  background-color: var(--Color-Dark-Slate-Grey);
+  color: var(--Color-White);
+  font-weight: var(--font-weight-700);
+  font-size: var(--Font-size-08);
+  padding: 0.9rem 0;
+  cursor: pointer;
+  border: none;
+  transition: all ease-in-out 0.2s;
+}
+
+.form button:hover {
+  background-color: var(--Color-Tomato);
+}
