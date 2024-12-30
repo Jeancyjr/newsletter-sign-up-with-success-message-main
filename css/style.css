@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Roboto";
+  src: 
+    local( "Roboto" ),
+    url( "../fonts/Roboto-Regular.ttf" ) format( "truetype" );
   font-weight: 400;
-  src: url( "../fonts/Roboto-Regular.ttf" ) format( "truetype" );
 }
 
 @font-face {
@@ -21,9 +23,11 @@
   --Color-White: hsl(0, 0%, 100%);
 
   /* Font size */
-  --Font-size-paragraph: 1em;
+  --Font-size-button: 1.1em;
+  --Font-size-1: 1em;
   --Font-size-09: 0.9em;
   --Font-size-08: 0.8em;
+  --Font-size-07: 0.7em;
   --Font-size-06: 0.6em;
 
   /* Font family */
@@ -54,7 +58,7 @@
 
 body {
   /* 3. Add accessible line-height */
-  background: var(--Color-Charcoal-Grey);
+  /* background: var(--Color-Charcoal-Grey); */
   color: var(--Color-Dark-Slate-Grey);
   font-family: var(--font-family);
   font-size: var(--Font-size-paragraph);
@@ -95,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* White background */
-.bg-white {
+/* .bg-white {
   background: var(--Color-White);
   margin: 4rem auto;
   width: 53%;
@@ -104,9 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  /* display: flex;
-  flex-direction: row-reverse; */
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -117,16 +118,15 @@ h1, h2, h3, h4, h5, h6 {
 picture {
   width: auto;
   order: 1;
-}
+} */
 
 /* form-container */
-.form-container {
+/* .form-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   flex-wrap: wrap;
   width: auto;
-  padding: 2rem;
+  padding: 2em;
 }
 
 .form-container ul, li {
@@ -151,35 +151,35 @@ picture {
 
 .form-container ul li img {
   width: 5.6%;
-}
+} */
 
 /* Text styling */
-.form-container h1 {
+/* .form-container h1 {
   font-size: 2.8em;
 }
 
 .form-container p {
   font-size: var(--Font-size-08);
   margin-top: var(--Margin-top-05rem);
-}
+} */
 
 /* Form styling */
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
   margin-top: var(--Margin-top-1rem);
-}
+} */
 
 /* Label styling */
-.form label {
+/* .form label {
   font-size: var(--Font-size-06);
   font-weight: var(--font-weight-700);
   margin-top: var(--Margin-top-1rem);
-}
+} */
 
 /* Input styling */
 
-.form input,
+/* .form input,
 button {
   margin: 0.6rem 0;
   padding: 0.7rem 0;
@@ -195,10 +195,10 @@ button {
 
 .form input[type="email"]::placeholder {
   font-size: var(--Font-size-08);
-}
+} */
 
 /* Button styling */
-.form button {
+/* .form button {
   background-color: var(--Color-Dark-Slate-Grey);
   color: var(--Color-White);
   font-weight: var(--font-weight-700);
@@ -211,4 +211,95 @@ button {
 
 .form button:hover {
   background-color: var(--Color-Tomato);
+} */
+
+/* ***************************************************************************************************** */
+
+/* Mobile first */
+
+.sign-up-illustration {
+  width: 100%;
+}
+
+/* bg-white */
+.bg-white {
+  background: var(--Color-White);
+}
+
+/* form-container */
+.form-container {
+  padding: 1.5em;
+}
+
+/* form-container Text */
+.form-container h1 {
+  font-size: 2.5em;
+}
+
+.form-container p {
+  margin-top: var(--Margin-top-1rem);
+}
+
+/* form-container List */
+.form-container ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 1.8rem;
+}
+
+.form-container ul li {
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.form label {
+  font-size: var(--Font-size-09);
+  font-weight: var(--font-weight-700);
+}
+
+.form input {
+  border: 1px solid var(--Color-Dark-Slate-Grey);
+  outline: none;
+}
+
+.form input:not(:focus):invalid {
+  background: hsl(4, 100%, 67%, 20%);
+  border: 1px solid var(--Color-Tomato);
+  outline-color: var(--Color-Tomato);
+}
+
+.form input, .form button {
+  padding: var(--Margin-top-1rem);
+  border-radius: 0.5rem;
+}
+
+.form input::placeholder {
+  font-size: var(--Font-size-button);
+  padding: 0 .6rem;
+}
+
+.form button {
+  background: var(--Color-Dark-Slate-Grey);
+  color: var(--Color-White);
+  font-size: var(--Font-size-button);
+  font-weight: var(--font-weight-700);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.form button:hover {
+  background: var(--Color-Tomato);
+  box-shadow: 4px 4px 14px var(--Color-Tomato);
 }

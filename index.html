@@ -10,7 +10,7 @@
 
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css">
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
@@ -21,29 +21,26 @@
 
   <main>
     <section class="bg-white">
-      <div class="container">
-        <picture>
-          <source media="(max-width: 40.625rem)" srcset="./assets/images/illustration-sign-up-mobile.svg">
-          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign-up illustration"
-            class="sign-up-illustration">
-        </picture>
-        <div class="form-container">
-          <h1>Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul>
-            <li><img src="./assets/images/icon-list.svg" alt="list icon">Product discovery and building what matters
-            </li>
-            <li><img src="./assets/images/icon-list.svg" alt="list icon">Measuring to ensure updates are a success</li>
-            <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
-          </ul>
-          <form action="#" method="POST" class="form">
-            <label for="email">Email address</label>
-            <input pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" type="email" id="email" name="email"
-              placeholder="email@company.com" required>
-            <button type="submit" aria-expanded="undefined" class="btn">Subscribe to monthly newsletter</button>
-          </form>
-        </div>
-
+      <picture>
+        <source media="(min-width: 680px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration"
+          class="sign-up-illustration">
+      </picture>
+      <div class="form-container">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li><img src="./assets/images/icon-list.svg" alt="list icon">Product discovery and building what matters
+          </li>
+          <li><img src="./assets/images/icon-list.svg" alt="list icon">Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
+        </ul>
+        <form action="#" method="POST" class="form">
+          <label for="email">Email address</label>
+          <input type="email" title="Valid email required" id="email" name="email" placeholder="email@company.com"
+            required>
+          <button type="submit" aria-expanded="undefined" class="btn">Subscribe to monthly newsletter</button>
+        </form>
       </div>
     </section>
   </main>

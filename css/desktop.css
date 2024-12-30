@@ -1,0 +1,24 @@
+/* Media query */
+
+@media (min-width: 650px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+  .bg-white {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 6rem auto;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+}
