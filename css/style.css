@@ -233,10 +233,11 @@ button {
 
 /* form-container Text */
 .form-container h1 {
-  font-size: 2.5em;
+  font-size: clamp(1.9rem, 1.095rem + 1.895vw, 2.8rem);
 }
 
 .form-container p {
+  font-size: clamp(0.8rem, 0.621rem + 0.421vw, 1rem);
   margin-top: var(--Margin-top-1rem);
 }
 
@@ -252,6 +253,7 @@ button {
   align-items: start;
   gap: 0.8rem;
   margin: 0.8rem 0;
+  font-size: clamp(0.8rem, 0.621rem + 0.421vw, 1rem);
 }
 
 /* Form styling */
@@ -263,7 +265,7 @@ button {
 }
 
 .form label {
-  font-size: var(--Font-size-09);
+  font-size: clamp(0.7rem, 0.521rem + 0.421vw, 0.9rem);
   font-weight: var(--font-weight-700);
 }
 
@@ -284,14 +286,14 @@ button {
 }
 
 .form input::placeholder {
-  font-size: var(--Font-size-button);
+  font-size: clamp(0.8rem, 0.532rem + 0.632vw, 1.1rem);
   padding: 0 .6rem;
 }
 
 .form button {
   background: var(--Color-Dark-Slate-Grey);
   color: var(--Color-White);
-  font-size: var(--Font-size-button);
+  font-size: clamp(0.8rem, 0.532rem + 0.632vw, 1.1rem);
   font-weight: var(--font-weight-700);
   border: none;
   outline: none;

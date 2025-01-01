@@ -1,6 +1,6 @@
 /* Media query */
 
-@media (min-width: 650px) {
+@media (min-width: 680px) and (max-width: 767px) {
   body {
     background: var(--Color-Dark-Slate-Grey);
   }
@@ -10,11 +10,329 @@
     width: 90%;
     margin: 6rem auto;
     align-items: center;
-    padding: 2rem;
+    padding: 1em;
     border-radius: 1rem;
   }
 
   picture {
     order: 1;
   }
+
+  /* form-container */
+.form-container {
+  padding: 1.5em;
 }
+
+/* form-container Text */
+/* .form-container h1 {
+  font-size: 1.9em;
+} */
+
+.form-container p {
+  /* font-size: .9em; */
+  text-wrap: pretty;
+}
+
+/* form-container List */
+.form-container ul {
+  margin-top: 1.5rem;
+}
+
+.form-container ul img {
+  width: 7%;
+}
+
+.form-container ul li {
+  /* font-size: .9em; */
+  text-wrap: pretty;
+}
+
+/* Form styling */
+.form {
+  margin-top: 2rem;
+  gap: .7rem;
+}
+
+.form input::placeholder {
+  padding: 0 .6rem;
+}
+
+.form input, .form button {
+  /* font-size: .8em; */
+  padding: .8em;
+}
+}
+
+/* CSS for tablets in landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+  .bg-white {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin: 6rem auto;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  /* form-container */
+.form-container {
+  padding: 1.5em;
+}
+
+/* form-container Text */
+/* .form-container h1 {
+  font-size: 1.9em;
+} */
+
+.form-container p {
+  /* font-size: .9em; */
+  text-wrap: pretty;
+}
+
+/* form-container List */
+.form-container ul {
+  margin-top: 1.5rem;
+}
+
+.form-container ul img {
+  width: 7%;
+}
+
+.form-container ul li {
+  /* font-size: .9em; */
+  text-wrap: pretty;
+}
+
+/* Form styling */
+.form {
+  margin-top: 2rem;
+  gap: .7rem;
+}
+
+.form input::placeholder {
+  padding: 0 .6rem;
+}
+
+.form input, .form button {
+  /* font-size: .8em; */
+  padding: .8em;
+}
+}
+
+/* CSS for small laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+  .bg-white {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin: 4rem auto;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  /* form-container */
+.form-container {
+  padding: 1.5em;
+}
+
+/* form-container Text */
+.form-container h1 {
+  font-size: 2.3em;
+}
+
+.form-container p {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* form-container List */
+.form-container ul {
+  margin-top: 1.5rem;
+}
+
+.form-container ul img {
+  width: 7%;
+}
+
+.form-container ul li {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* Form styling */
+.form {
+  margin-top: 2rem;
+  gap: .7rem;
+}
+
+.form label {
+  font-size: .7em;
+}
+
+.form input::placeholder {
+  font-size: .9em;
+  padding: 0 .6rem;
+}
+
+.form input, .form button {
+  font-size: .9em;
+  padding: .8em;
+}
+}
+
+/* CSS for regular desktops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+  .bg-white {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin: 4rem auto;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  /* form-container */
+.form-container {
+  padding: 1.5em;
+}
+
+/* form-container Text */
+.form-container h1 {
+  font-size: 2.4em;
+}
+
+.form-container p {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* form-container List */
+.form-container ul {
+  margin-top: 1.5rem;
+}
+
+.form-container ul img {
+  width: 7%;
+}
+
+.form-container ul li {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* Form styling */
+.form {
+  margin-top: 2rem;
+  gap: .7rem;
+}
+
+.form label {
+  font-size: .7em;
+}
+
+.form input::placeholder {
+  font-size: .9em;
+  padding: 0 .6rem;
+}
+
+.form input, .form button {
+  font-size: .9em;
+  padding: .8em;
+}
+}
+
+/* CSS for large desktops */
+@media (min-width: 1921px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+  .bg-white {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    margin: 4rem auto;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  /* form-container */
+.form-container {
+  padding: 1.5em;
+}
+
+/* form-container Text */
+.form-container h1 {
+  font-size: 2.8em;
+}
+
+.form-container p {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* form-container List */
+.form-container ul {
+  margin-top: 1.5rem;
+}
+
+.form-container ul img {
+  width: 7%;
+}
+
+.form-container ul li {
+  font-size: .8em;
+  text-wrap: pretty;
+}
+
+/* Form styling */
+.form {
+  margin-top: 2rem;
+  gap: .7rem;
+}
+
+.form label {
+  font-size: .7em;
+}
+
+.form input::placeholder {
+  font-size: .9em;
+  padding: 0 .6rem;
+}
+
+.form input, .form button {
+  font-size: .9em;
+  padding: .8em;
+}
+}
+
+
+
