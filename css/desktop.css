@@ -1,6 +1,6 @@
 /* Media query */
 
-@media (min-width: 680px) and (max-width: 767px) {
+@media (min-width: 540px) and (max-width: 767px) {
   body {
     background: var(--Color-Dark-Slate-Grey);
   }
@@ -11,7 +11,7 @@
     margin: 6rem auto;
     align-items: center;
     padding: 1em;
-    border-radius: 1rem;
+    border-radius: 2rem;
   }
 
   picture {
@@ -24,12 +24,12 @@
 }
 
 /* form-container Text */
-/* .form-container h1 {
-  font-size: 1.9em;
-} */
+.form-container h1 {
+  font-size: clamp(1.7rem, 0.748rem + 2.819vw, 2.1rem);
+}
 
 .form-container p {
-  /* font-size: .9em; */
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
 }
 
@@ -43,23 +43,28 @@
 }
 
 .form-container ul li {
-  /* font-size: .9em; */
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
+}
+
+.form input::placeholder {
+  font-size: .7rem;
 }
 
 /* Form styling */
 .form {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   gap: .7rem;
 }
 
-.form input::placeholder {
-  padding: 0 .6rem;
+.form label {
+  font-size: .6em;
 }
 
-.form input, .form button {
-  /* font-size: .8em; */
-  padding: .8em;
+.form input,
+.form button {
+  font-size: .7rem;
+  padding: .7rem;
 }
 }
 
@@ -71,11 +76,11 @@
   .bg-white {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 70%;
+    width: 80%;
     margin: 6rem auto;
     align-items: center;
-    padding: 1em;
-    border-radius: 1rem;
+    padding: 1.5em;
+    border-radius: 2rem;
   }
 
   picture {
@@ -88,12 +93,12 @@
 }
 
 /* form-container Text */
-/* .form-container h1 {
-  font-size: 1.9em;
-} */
+.form-container h1 {
+  font-size: clamp(2.1rem, -0.6rem + 5.625vw, 3rem);
+}
 
 .form-container p {
-  /* font-size: .9em; */
+  font-size: clamp(0.9rem, 0.6rem + 0.625vw, 1rem);
   text-wrap: pretty;
 }
 
@@ -107,8 +112,12 @@
 }
 
 .form-container ul li {
-  /* font-size: .9em; */
+  font-size: clamp(0.9rem, 0.6rem + 0.625vw, 1rem);
   text-wrap: pretty;
+}
+
+.form input::placeholder {
+  font-size: .7rem;
 }
 
 /* Form styling */
@@ -117,13 +126,14 @@
   gap: .7rem;
 }
 
-.form input::placeholder {
-  padding: 0 .6rem;
+.form label {
+  font-size: .7em;
 }
 
-.form input, .form button {
-  /* font-size: .8em; */
-  padding: .8em;
+.form input,
+.form button {
+  font-size: .9rem;
+  padding: .8rem;
 }
 }
 
@@ -135,11 +145,11 @@
   .bg-white {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 50%;
-    margin: 4rem auto;
+    width: 60%;
+    margin: 6rem auto;
     align-items: center;
-    padding: 1em;
-    border-radius: 1rem;
+    padding: 1.5em;
+    border-radius: 2rem;
   }
 
   picture {
@@ -153,11 +163,11 @@
 
 /* form-container Text */
 .form-container h1 {
-  font-size: 2.3em;
+  font-size: clamp(1.7rem, -3.124rem + 7.529vw, 2.9rem);
 }
 
 .form-container p {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
 }
 
@@ -171,8 +181,12 @@
 }
 
 .form-container ul li {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
+}
+
+.form input::placeholder {
+  font-size: .7rem;
 }
 
 /* Form styling */
@@ -185,14 +199,10 @@
   font-size: .7em;
 }
 
-.form input::placeholder {
-  font-size: .9em;
-  padding: 0 .6rem;
-}
-
-.form input, .form button {
-  font-size: .9em;
-  padding: .8em;
+.form input,
+.form button {
+  font-size: .8rem;
+  padding: .7rem;
 }
 }
 
@@ -204,11 +214,11 @@
   .bg-white {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 50%;
+    width: 56%;
     margin: 4rem auto;
     align-items: center;
-    padding: 1em;
-    border-radius: 1rem;
+    padding: 1.5em;
+    border-radius: 2rem;
   }
 
   picture {
@@ -222,11 +232,11 @@
 
 /* form-container Text */
 .form-container h1 {
-  font-size: 2.4em;
+  font-size: clamp(1.7rem, -3.124rem + 7.529vw, 2.9rem);
 }
 
 .form-container p {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
 }
 
@@ -240,8 +250,12 @@
 }
 
 .form-container ul li {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
+}
+
+.form input::placeholder {
+  font-size: .7rem;
 }
 
 /* Form styling */
@@ -254,14 +268,10 @@
   font-size: .7em;
 }
 
-.form input::placeholder {
-  font-size: .9em;
-  padding: 0 .6rem;
-}
-
-.form input, .form button {
-  font-size: .9em;
-  padding: .8em;
+.form input,
+.form button {
+  font-size: .9rem;
+  padding: .8rem;
 }
 }
 
@@ -273,11 +283,11 @@
   .bg-white {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 50%;
+    width: 60%;
     margin: 4rem auto;
     align-items: center;
-    padding: 1em;
-    border-radius: 1rem;
+    padding: 1.5em;
+    border-radius: 2rem;
   }
 
   picture {
@@ -291,11 +301,11 @@
 
 /* form-container Text */
 .form-container h1 {
-  font-size: 2.8em;
+  font-size: clamp(1.7rem, -3.124rem + 7.529vw, 2.9rem);
 }
 
 .form-container p {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
 }
 
@@ -309,8 +319,12 @@
 }
 
 .form-container ul li {
-  font-size: .8em;
+  font-size: clamp(0.7rem, 0.224rem + 1.41vw, 0.9rem);
   text-wrap: pretty;
+}
+
+.form input::placeholder {
+  font-size: .7rem;
 }
 
 /* Form styling */
@@ -323,14 +337,10 @@
   font-size: .7em;
 }
 
-.form input::placeholder {
-  font-size: .9em;
-  padding: 0 .6rem;
-}
-
-.form input, .form button {
-  font-size: .9em;
-  padding: .8em;
+.form input,
+.form button {
+  font-size: .9rem;
+  padding: .8rem;
 }
 }
 

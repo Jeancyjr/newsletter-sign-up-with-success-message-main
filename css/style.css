@@ -98,123 +98,6 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/* White background */
-/* .bg-white {
-  background: var(--Color-White);
-  margin: 4rem auto;
-  width: 53%;
-  padding: 1.3rem;
-  border-radius: 2em;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  grid-auto-rows: 1fr;
-  align-items: center;
-}
-
-picture {
-  width: auto;
-  order: 1;
-} */
-
-/* form-container */
-/* .form-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: auto;
-  padding: 2em;
-}
-
-.form-container ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-.form-container ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  margin-top: var(--Margin-top-1rem);
-  text-indent: var(--Font-size-08);
-}
-
-.form-container ul li {
-  display: flex;
-  align-items: center;
-  font-size: var(--Font-size-08);
-  margin: 0.2rem 0;
-}
-
-.form-container ul li img {
-  width: 5.6%;
-} */
-
-/* Text styling */
-/* .form-container h1 {
-  font-size: 2.8em;
-}
-
-.form-container p {
-  font-size: var(--Font-size-08);
-  margin-top: var(--Margin-top-05rem);
-} */
-
-/* Form styling */
-/* .form {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--Margin-top-1rem);
-} */
-
-/* Label styling */
-/* .form label {
-  font-size: var(--Font-size-06);
-  font-weight: var(--font-weight-700);
-  margin-top: var(--Margin-top-1rem);
-} */
-
-/* Input styling */
-
-/* .form input,
-button {
-  margin: 0.6rem 0;
-  padding: 0.7rem 0;
-  border-radius: 0.5rem;
-}
-
-.form input[type="email"] {
-  background-color: transparent;
-  border: 0.8px solid var(--Color-Grey);
-  padding-left: 1.1em;
-  outline: none;
-}
-
-.form input[type="email"]::placeholder {
-  font-size: var(--Font-size-08);
-} */
-
-/* Button styling */
-/* .form button {
-  background-color: var(--Color-Dark-Slate-Grey);
-  color: var(--Color-White);
-  font-weight: var(--font-weight-700);
-  font-size: var(--Font-size-08);
-  padding: 0.9rem 0;
-  cursor: pointer;
-  border: none;
-  transition: all ease-in-out 0.2s;
-}
-
-.form button:hover {
-  background-color: var(--Color-Tomato);
-} */
-
-/* ***************************************************************************************************** */
-
 /* Mobile first */
 
 .sign-up-illustration {
@@ -234,11 +117,11 @@ button {
 
 /* form-container Text */
 .form-container h1 {
-  font-size: clamp(1.9rem, 1.095rem + 1.895vw, 2.8rem);
+  font-size: 2.8em;
 }
 
 .form-container p {
-  font-size: clamp(0.8rem, 0.621rem + 0.421vw, 1rem);
+  font-size: 1em;
   margin-top: var(--Margin-top-1rem);
 }
 
@@ -253,8 +136,8 @@ button {
   display: flex;
   align-items: start;
   gap: 0.8rem;
+  font-size: 1em;
   margin: 0.8rem 0;
-  font-size: clamp(0.8rem, 0.621rem + 0.421vw, 1rem);
 }
 
 /* Form styling */
@@ -266,7 +149,7 @@ button {
 }
 
 .form label {
-  font-size: clamp(0.7rem, 0.521rem + 0.421vw, 0.9rem);
+  font-size: 0.8em;
   font-weight: var(--font-weight-700);
 }
 
@@ -278,7 +161,6 @@ button {
 .form input:not(:focus):invalid {
   background: hsl(4, 100%, 67%, 20%);
   border: 1px solid var(--Color-Tomato);
-  outline-color: var(--Color-Tomato);
 }
 
 .form input, .form button {
@@ -287,14 +169,13 @@ button {
 }
 
 .form input::placeholder {
-  font-size: clamp(0.8rem, 0.532rem + 0.632vw, 1.1rem);
-  padding: 0 .6rem;
+  font-size: 1em;
 }
 
 .form button {
   background: var(--Color-Dark-Slate-Grey);
   color: var(--Color-White);
-  font-size: clamp(0.8rem, 0.532rem + 0.632vw, 1.1rem);
+  font-size: 1em;
   font-weight: var(--font-weight-700);
   border: none;
   outline: none;
