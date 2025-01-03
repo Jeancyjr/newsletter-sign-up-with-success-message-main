@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/desktop.css">
 
+  <!-- JS -->
+  <script defer src="./js/main.js"></script>
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 
@@ -35,12 +38,30 @@
           <li><img src="./assets/images/icon-list.svg" alt="list icon">Measuring to ensure updates are a success</li>
           <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
         </ul>
-        <form action="#" method="POST" class="form">
+
+        <form action="#" method="POST" class="form" id="subscription-form" novalidate>
           <label for="email">Email address</label>
           <input type="email" title="Valid email required" id="email" name="email" placeholder="email@company.com"
             required>
+          <div class="form-field__messages" aria-live="polite"></div>
           <button type="submit" aria-expanded="undefined" class="btn">Subscribe to monthly newsletter</button>
         </form>
+      </div>
+    </section>
+
+    <section id="success-message">
+      <div class="container flex">
+        <div class="content">
+          <picture>
+            <img src="./assets/images/icon-success.svg" alt="success message icon" class="success-icon">
+          </picture>
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>.
+            Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <div class="btn">
+          <button type="button">Dismiss message</button>
+        </div>
       </div>
     </section>
   </main>

@@ -158,10 +158,10 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.form input:not(:focus):invalid {
+/* .form input:not(:focus):invalid {
   background: hsl(4, 100%, 67%, 20%);
   border: 1px solid var(--Color-Tomato);
-}
+} */
 
 .form input, .form button {
   padding: var(--Margin-top-1rem);
@@ -186,4 +186,211 @@ h1, h2, h3, h4, h5, h6 {
 .form button:hover {
   background: var(--Color-Tomato);
   box-shadow: 4px 4px 14px var(--Color-Tomato);
+}
+
+/* ********************************************************************** */
+
+/* Success-message */
+
+.container {
+  background: var(--Color-White);
+  padding: 1.5em;
+}
+
+.flex {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14rem;
+}
+
+.content h1, .content p {
+  margin-top: 2rem;
+  width: 100%;
+  text-wrap: wrap;
+}
+
+.content h1 {
+  font-size: 2.3em;
+  font-weight: var(--font-weight-700);
+  line-height: 1.1;
+}
+
+.content span {
+  font-weight: var(--font-weight-700);
+}
+
+.content p {
+  font-size: 1.2em;
+}
+
+.btn button {
+  display: grid;
+  text-align: center;
+  font-weight: var(--font-weight-700);
+  width: 100%;
+  padding: .8em;
+  border-radius: .4rem;
+  border: none;
+  color: var(--Color-White);
+  background: var(--Color-Dark-Slate-Grey);
+  cursor: pointer;
+  transition: all ease .2s;
+}
+
+.btn button:hover {
+  background: var(--Color-Tomato);
+  box-shadow: 4px 4px 14px var(--Color-Tomato);
+}
+
+#success-message {
+  display: none;
+}
+
+/* ************************************************************************************************** */
+
+@media (min-width: 540px) and (max-width: 767px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 60%;
+    height: auto;
+    margin: 6rem auto;
+    padding: 3em;
+    border-radius: 2rem;
+  }
+
+  .flex {
+    gap: 2rem;
+    box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .content h1 {
+    font-size: clamp(2.5rem, 0.597rem + 5.639vw, 3.3rem);
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: clamp(0.8rem, 0.324rem + 1.41vw, 1rem);
+  }
+
+}
+
+/* CSS for tablets in landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 46%;
+    height: auto;
+    margin: 6rem auto;
+    padding: 3em;
+    border-radius: 2rem;
+  }
+
+  .flex {
+    gap: 2rem;
+    box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .content h1 {
+    font-size: clamp(2.9rem, 1.7rem + 2.5vw, 3.3rem);
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: 1em;
+  }
+}
+
+/* CSS for small laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 36%;
+    height: auto;
+    margin: 6rem auto;
+    padding: 3em;
+    border-radius: 2rem;
+  }
+
+  .flex {
+    gap: 2rem;
+    box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .content h1 {
+    font-size: clamp(3rem, 1.794rem + 1.882vw, 3.3rem);
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: clamp(0.8rem, 0.324rem + 1.41vw, 1rem);
+  }
+}
+
+/* CSS for regular desktops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 32%;
+    height: auto;
+    margin: 8rem auto;
+    padding: 3em;
+    border-radius: 2rem;
+  }
+
+  .flex {
+    gap: 2rem;
+    box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .content h1 {
+    font-size: clamp(2.8rem, -1.228rem + 5.031vw, 3.3rem);;
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: clamp(0.8rem, 0.324rem + 1.41vw, 1rem);
+  }
+}
+
+/* CSS for large desktops */
+@media (min-width: 1921px) {
+  body {
+    background: var(--Color-Dark-Slate-Grey);
+  }
+
+  .container {
+    width: 34%;
+    height: auto;
+    margin: 10rem auto;
+    padding: 3em;
+    border-radius: 2rem;
+  }
+
+  .flex {
+    gap: 2rem;
+    box-shadow: 4px 10px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  .content h1 {
+    font-size: clamp(2.8rem, -1.228rem + 5.031vw, 3.3rem);;
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: clamp(0.8rem, 0.324rem + 1.41vw, 1rem);
+  }
 }
