@@ -158,11 +158,6 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-/* .form input:not(:focus):invalid {
-  background: hsl(4, 100%, 67%, 20%);
-  border: 1px solid var(--Color-Tomato);
-} */
-
 .form input, .form button {
   padding: var(--Margin-top-1rem);
   border-radius: 0.5rem;
@@ -188,9 +183,26 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 4px 4px 14px var(--Color-Tomato);
 }
 
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .form-field__messages {
+  display: none;
+  font-size: .8em;
+  font-weight: var(--font-weight-700);
+  color: var(--Color-Tomato);
+}
+
+.form .show-error {
+  display: block;
+}
+
 /* ********************************************************************** */
 
-/* Success-message */
+/* Success-message styling */
 
 .container {
   background: var(--Color-White);

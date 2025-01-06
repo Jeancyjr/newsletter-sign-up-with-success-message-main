@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/desktop.css">
 
-  <!-- JS -->
-  <script defer src="./js/main.js"></script>
+  <!-- js -->
+  <script src="./js/main.js" defer></script>
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
@@ -38,12 +38,14 @@
           <li><img src="./assets/images/icon-list.svg" alt="list icon">Measuring to ensure updates are a success</li>
           <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
         </ul>
-
+        <!-- Form -->
         <form action="#" method="POST" class="form" id="subscription-form" novalidate>
-          <label for="email">Email address</label>
+          <div class="errorMessage">
+            <label for="email">Email address</label>
+            <div class="form-field__messages" class="show-error" aria-live="polite">Valid email required</div>
+          </div>
           <input type="email" title="Valid email required" id="email" name="email" placeholder="email@company.com"
             required>
-          <div class="form-field__messages" aria-live="polite"></div>
           <button type="submit" aria-expanded="undefined" class="btn">Subscribe to monthly newsletter</button>
         </form>
       </div>
