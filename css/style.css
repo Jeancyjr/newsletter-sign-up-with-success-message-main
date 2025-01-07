@@ -183,21 +183,19 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 4px 4px 14px var(--Color-Tomato);
 }
 
-.errorMessage {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .form .form-field__messages {
-  display: none;
+  visibility: hidden;
   font-size: .8em;
   font-weight: var(--font-weight-700);
   color: var(--Color-Tomato);
+  display: flex;
+  justify-content: right;
+  position: relative;
+  top: 1.8rem;
 }
 
-.form .show-error {
-  display: block;
+.hidden {
+  visibility: hidden;
 }
 
 /* ********************************************************************** */
@@ -254,10 +252,6 @@ h1, h2, h3, h4, h5, h6 {
 .btn button:hover {
   background: var(--Color-Tomato);
   box-shadow: 4px 4px 14px var(--Color-Tomato);
-}
-
-#success-message {
-  display: none;
 }
 
 /* ************************************************************************************************** */

@@ -1,3 +1,4 @@
+const formContainer = document.getElementById('form-container');
 const subForm = document.getElementById("subscription-form");
 const formInput = document.getElementById("email");
 const errorMessage = document.querySelector(".form-field__messages");
@@ -5,14 +6,11 @@ const successMessage = document.getElementById("success-message");
 const resetForm = successMessage.querySelector("button");
 
 function showError() {
-  errorMessage.classList.toggle("show-error");
-  formInput.style.borderColor = "var(--Color-Tomato)";
-  formInput.style.backgroundColor = "hsl(4, 100%, 67%, 10%";
+  errorMessage.classList.toggle("form-field__messages");
 }
 
 function clearError() {
-  errorMessage.classList.remove("show-error");
-  formInput.style.borderColor = "var(--Color-Dark-Slate-Grey)";
+  errorMessage.classList.remove("form-field__messages");
 }
 
 function isValidEmail(email) {
@@ -20,10 +18,9 @@ function isValidEmail(email) {
     return emailPattern.test(email);
 }
 
-function showSuccess() {
-  subForm.parentElement.style.display = "none";
-  successMessage.style.display = "block";
-}
+// function showSuccess() {
+  
+// }
 
 subForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -42,15 +39,28 @@ subForm.addEventListener("submit", (e) => {
 
   clearError();
 
-  showSuccess()
+  // showSuccess();
+
+  // Show success message
+  formContainer.classList.add('hidden');
+  successMessage.setAttribute('aria-hidden', 'false');
+  successMessage.removeAttribute('hidden');
+  formContainer.setAttribute('aria-hidden', 'true');
+
+  // Move focus to the first focusable element in the success panel
+  const successPanelFocusable = successMessage.querySelector('button');
+  if (successPanelFocusable) {
+  successPanelFocusable.focus();
+  }
+
 
   const emailSpan = successMessage.querySelector("span");
   emailSpan.textContent = emailValue;
 
   resetForm.addEventListener("click", () => {
-    successMessage.style.display = "none";
-    subForm.parentElement.style.display = "block";
-    subForm.reset();
+    successMessage.classList.add('hidden');
+    formContainer.classList.remove('hidden');
+    formContainer.reset();
   });
 });
 

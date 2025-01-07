@@ -21,13 +21,11 @@
 <body>
 
   <!-- Sign-up form start -->
-
   <main>
-    <section class="bg-white">
+    <section class="bg-white" data-panel="first" class="hidden" id="form-container">
       <picture>
         <source media="(min-width: 540px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration"
-          class="sign-up-illustration">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="sign-up-illustration">
       </picture>
       <div class="form-container">
         <h1>Stay updated!</h1>
@@ -40,18 +38,19 @@
         </ul>
         <!-- Form -->
         <form action="#" method="POST" class="form" id="subscription-form" novalidate>
-          <div class="errorMessage">
-            <label for="email">Email address</label>
-            <div class="form-field__messages" class="show-error" aria-live="polite">Valid email required</div>
+          <div id="errorMessage" aria-live="polite">
+            <div class="form-field__messages" class="hidden">Valid email required</div>
           </div>
-          <input type="email" title="Valid email required" id="email" name="email" placeholder="email@company.com"
-            required>
-          <button type="submit" aria-expanded="undefined" class="btn">Subscribe to monthly newsletter</button>
+          <label for="email">Email address</label>
+          <input type="email" title="Valid email required" id="email" name="email" aria-describedby="errorMessage"
+            placeholder="email@company.com" autocomplete="email" required>
+          <button type="submit" class="btn">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </section>
 
-    <section id="success-message">
+    <!-- Success message -->
+    <section id="success-message" data-panel="second" aria-hidden="true" hidden>
       <div class="container flex">
         <div class="content">
           <picture>
