@@ -10,7 +10,6 @@
 
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/desktop.css">
 
   <!-- js -->
   <script src="./js/main.js" defer></script>
@@ -22,11 +21,13 @@
 
   <!-- Sign-up form start -->
   <main>
-    <section class="bg-white" data-panel="first" class="hidden" id="form-container">
+    <section class="bg-white" data-panel="first" class="hidden" id="first">
+      <!-- Illustration -->
       <picture>
         <source media="(min-width: 540px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="sign-up-illustration">
       </picture>
+      <!-- Text -->
       <div class="form-container">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -37,20 +38,23 @@
           <li><img src="./assets/images/icon-list.svg" alt="list icon">And much more!</li>
         </ul>
         <!-- Form -->
-        <form action="#" method="POST" class="form" id="subscription-form" novalidate>
-          <div id="errorMessage" aria-live="polite">
-            <div class="form-field__messages" class="hidden">Valid email required</div>
+        <form action="#" method="POST" id="form" class="form" novalidate>
+          <!-- error -->
+          <div id="errorMessage" aria-live="polite" class="hidden">
+            <div class="error">Valid email required</div>
           </div>
+          <!-- input -->
           <label for="email">Email address</label>
-          <input type="email" title="Valid email required" id="email" name="email" aria-describedby="errorMessage"
-            placeholder="email@company.com" autocomplete="email" required>
+          <input type="text" title="Please enter your email address" id="email" name="email"
+            aria-describedby="errorMessage" placeholder="email@company.com" autocomplete="email" required>
+          <!-- button -->
           <button type="submit" class="btn">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </section>
 
     <!-- Success message -->
-    <section id="success-message" data-panel="second" aria-hidden="true" hidden>
+    <section id="success-message" hidden>
       <div class="container flex">
         <div class="content">
           <picture>
