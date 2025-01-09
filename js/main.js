@@ -44,6 +44,7 @@ function handleForm(e) {
 
   // success page
   firstPanel.classList.add("hidden");
+  firstPanel.style.display = "none";
   successMessage.removeAttribute("hidden");
 
   // replace span with email value
@@ -52,13 +53,11 @@ function handleForm(e) {
 
   // reset form
   dismissButton.addEventListener("click", () => {
-    firstPanel.classList.remove("hidden");
     successMessage.setAttribute("hidden", "true");
-    emailInput.textContent = "";
-    emailInput.reset();
+    firstPanel.classList.remove("hidden");
+    firstPanel.style.display = "block";
+    firstPanel.resets();
   });
-
-  clearError();
 }
 
 form.addEventListener("submit", handleForm);
